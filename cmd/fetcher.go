@@ -21,12 +21,10 @@ func Fetch() ([]*goquery.Document, error) {
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println(stories)
 	articles, err := fetchArticles(stories)
 	if err != nil {
 		return nil, err
 	}
-	fmt.Println(articles)
 	docs := fetchDocuments(articles)
 
 	return docs, nil
